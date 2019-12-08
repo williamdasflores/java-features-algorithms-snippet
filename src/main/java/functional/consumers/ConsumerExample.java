@@ -1,6 +1,6 @@
 package functional.consumers;
 
-import functional.domain.Employee;
+import domain.Employee;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
