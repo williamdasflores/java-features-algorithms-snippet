@@ -13,20 +13,7 @@ public class EmployeeData {
     private List<Employee> listEmployee = new ArrayList();
 
     public EmployeeData () {
-        Employee employee = new Employee();
-        employee.setId(1);
-        employee.setName("William Flores");
-        employee.setDepartament("IT Innovation");
-        employee.setSalary(new BigDecimal(10000));
-        employee.setBenefits(Arrays.asList("Allowance Meal", "Home-Office", "Health Insurance",
-                "Life Insurance", "Dental Insurance"));
-        listEmployee.add(employee);
-
-        Employee employee1 = new Employee(2, "Jéssica Souza", "HR", new BigDecimal(5000),
-                Arrays.asList("Health Insurance", "Life Insurance", "Allowance Meal"));
-        listEmployee.add(employee1);
-
-
+        initEmployee();
     }
 
     public boolean createEmployee(Employee employee) {
@@ -48,5 +35,28 @@ public class EmployeeData {
                .findFirst().get();
 
        return employee;
+    }
+
+    private void initEmployee() {
+        Employee employee1 = new Employee();
+        employee1.setId(1);
+        employee1.setName("William Flores");
+        employee1.setDepartament("IT Innovation");
+        employee1.setSalary(new BigDecimal(10000));
+        employee1.setBenefits(Arrays.asList("Allowance Meal", "Home-Office", "Health Insurance",
+                "Life Insurance", "Dental Insurance"));
+        listEmployee.add(employee1);
+
+        Employee employee2 = new Employee(2, "Jéssica Souza", "HR", new BigDecimal(5000),
+                Arrays.asList("Health Insurance", "Life Insurance", "Allowance Meal"));
+        listEmployee.add(employee2);
+
+        Employee employee3 = new Employee(3, "João Marcos de Souza", "HR", new BigDecimal(2000),
+                Arrays.asList("Health Insurance", "Life Insurance", "Allowance Meal", "Home Office"));
+        listEmployee.add(employee3);
+
+        Employee employee4 = new Employee(4, "Mariana Muller", "HR", new BigDecimal(800),
+                Arrays.asList("Life Insurance", "Allowance Meal"));
+        listEmployee.add(employee4);
     }
 }

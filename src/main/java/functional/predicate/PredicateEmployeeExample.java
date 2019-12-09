@@ -12,6 +12,7 @@ import java.util.function.Predicate;
 public class PredicateEmployeeExample {
 
     static Predicate<Employee> emp1 = (employee) -> employee.getSalary().compareTo(new BigDecimal(1000)) <= 0;
+    static Predicate<Employee> emp2 = (employee) -> employee.getSalary().compareTo(new BigDecimal(3000) )> 0;
 
     public static void main(String[] args) {
         List<Employee> listEmployee = getList();
@@ -19,7 +20,17 @@ public class PredicateEmployeeExample {
             if (emp1.test(employee))
                 System.out.println(employee.getName());
         });
+        filterEmployeeBySalary();
 
+    }
+
+    private static void filterEmployeeBySalary() {
+        EmployeeData data = new EmployeeData();
+        data.getListEmployee().forEach( employee -> {
+            if (emp2.test(employee)) {
+                System.out.println(employee.getName().toUpperCase());
+            }
+        });
     }
 
     private static List getList() {
