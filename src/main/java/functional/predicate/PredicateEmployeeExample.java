@@ -1,5 +1,6 @@
 package functional.predicate;
 
+import data.EmployeeData;
 import domain.Employee;
 
 import java.math.BigDecimal;
@@ -22,14 +23,12 @@ public class PredicateEmployeeExample {
     }
 
     private static List getList() {
-        List list = new ArrayList();
-        Employee emp1 = new Employee("William", "Innovation", new BigDecimal(10000),
-                Arrays.asList("Transport, Car, Vacation"));
-        list.add(emp1);
-        Employee emp2 = new Employee("Fernanda", "HR", new BigDecimal(1000),
-                Arrays.asList("Home-Office", "Transportation", "Car"));
-        list.add(emp2);
+        EmployeeData employeeData = new EmployeeData();
 
-        return list;
+        Employee employee = new Employee(3, "Teresa Santos", "Financial", new BigDecimal(1000),
+                Arrays.asList("Home Office", "Health Insurance", "Dental Insurance"));
+        employeeData.createEmployee(employee);
+
+        return employeeData.getListEmployee();
     }
 }

@@ -1,6 +1,5 @@
 package functional.predicate;
 
-import java.sql.SQLOutput;
 import java.util.function.Predicate;
 
 public class PredicateExample {

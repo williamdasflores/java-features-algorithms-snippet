@@ -1,5 +1,6 @@
 package functional.consumers;
 
+import data.EmployeeData;
 import domain.Employee;
 
 import java.math.BigDecimal;
@@ -14,14 +15,14 @@ public class ConsumerExample {
         Consumer<Employee> empBenefits = employee -> System.out.println(employee.getBenefits());
         //List<Employee> listEmployee = getList();
         //getList().forEach(empName.andThen(empBenefits));
-        List<Employee> listEmployee = getListByDepartment("Innovation");
+        List<Employee> listEmployee = getListByDepartment("IT Innovation");
         listEmployee.forEach(empName.andThen(empBenefits));
     }
 
     private static List getListByDepartment(String department) {
+        EmployeeData employeeData = new EmployeeData();
         List<Employee> filteredList = new ArrayList<>();
-        List<Employee> listAllEmployee = getList();
-        listAllEmployee.forEach( employee -> {
+        employeeData.getListEmployee().forEach( employee -> {
             if (department.equalsIgnoreCase(employee.getDepartament())) {
                 filteredList.add(employee);
             }
@@ -31,15 +32,8 @@ public class ConsumerExample {
     }
 
     private static List getList() {
-        List list = new ArrayList();
-        Employee emp1 = new Employee("William", "Innovation", new BigDecimal(10000),
-                Arrays.asList("Transport, Car, Vacation"));
-        list.add(emp1);
-        Employee emp2 = new Employee("Fernanda", "HR", new BigDecimal(1000),
-                Arrays.asList("Home-Office", "Transportation", "Car"));
-        list.add(emp2);
-
-        return list;
+        EmployeeData employeeData = new EmployeeData();
+        return employeeData.getListEmployee();
     }
 
 }
