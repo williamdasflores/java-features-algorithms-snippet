@@ -6,9 +6,15 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.Supplier;
 
 
 public class EmployeeData {
+
+    public static Supplier<Employee> employeeSupplier = () -> {
+        return new Employee(5, "Sheila Silva", "Financial", new BigDecimal(6000),
+                Arrays.asList("Life Insurance", "Allowance Meal", "Home Office", "Health Insurance"));
+    };
 
     private List<Employee> listEmployee = new ArrayList();
 

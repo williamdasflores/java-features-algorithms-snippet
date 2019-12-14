@@ -17,4 +17,8 @@ public class Employee {
     private String departament;
     private BigDecimal salary;
     private List<String> benefits;
+
+    public Employee(String name) {
+        this.name = name;
+    }
 }
