@@ -9,7 +9,7 @@ public class BinaryTree {
         return root;
     }
 
-    void insert(Integer value) {
+    public void insert(Integer value) {
         Node node = new Node(value);
 
         if (root == null)
@@ -18,7 +18,7 @@ public class BinaryTree {
             insertNode(root, node);
     }
 
-    void insertNode(Node currentNode, Node newNode) {
+    private void insertNode(Node currentNode, Node newNode) {
         if (currentNode.getRoot() > newNode.getRoot()) {
             if (currentNode.getLeft() == null)
                 currentNode.setLeft(newNode);
@@ -30,7 +30,6 @@ public class BinaryTree {
             else
                 insertNode(currentNode.getRight(), newNode);
         }
-
     }
 
     private void traversePreorder(StringBuilder sb, String padding, String pointer, Node node) {
