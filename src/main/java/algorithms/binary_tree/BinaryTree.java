@@ -51,6 +51,20 @@ public class BinaryTree {
         }
     }
 
+    public Integer getMinNode(Node node) {
+        if (node.getLeft() != null)
+            return getMinNode(node.getLeft());
+        else
+            return node.getRoot();
+    }
+
+    public Integer getMaxNode(Node node) {
+        if (node.getRight() != null)
+            return getMaxNode(node.getRight());
+        else
+            return node.getRoot();
+    }
+
     public String print(Node node) {
         StringBuilder str = new StringBuilder();
         traversePreorder(str, "", "", node);

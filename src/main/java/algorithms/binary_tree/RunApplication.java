@@ -15,10 +15,12 @@ public class RunApplication {
         myTree.insert(29);
         myTree.insert(14);
         myTree.insert(16);
-        myTree.insert(31);
-        myTree.insert(1);
+        myTree.insert(35);
+        myTree.insert(2);
 
 
         System.out.println(myTree.print(myTree.getRoot()));
+        System.out.println("Min Value: " + myTree.getMinNode(myTree.getRoot()));
+        System.out.println("Max Value: " + myTree.getMaxNode(myTree.getRoot()));
     }
 }

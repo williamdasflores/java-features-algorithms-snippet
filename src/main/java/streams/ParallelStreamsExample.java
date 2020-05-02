@@ -16,6 +16,10 @@ public class ParallelStreamsExample {
         Person john = new Person("John", 40);
         Person eloisa = new Person("Heloisa", 11);
         List<Person> people = Arrays.asList(william, priscilla, anaPaula, john, eloisa);
+        List<Integer> numbers = Arrays.asList(1,2,3,4,5,6,7,8,10,11,12,13,14,15);
+
+        // It will print unordered
+        numbers.stream().parallel().forEach(number -> System.out.println(number));
 
         people.parallelStream()
                 .filter( person -> {
