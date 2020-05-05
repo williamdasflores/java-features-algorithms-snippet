@@ -34,7 +34,6 @@ public class InsertionSort {
     }
 
     private void printList(List<Integer> numbers) {
-        numbers.stream().sorted();
         numbers.stream().forEach(number -> System.out.print(number + " "));
     }
 }

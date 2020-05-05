@@ -6,6 +6,6 @@ public class RunApplication {
 
     public static void main(String[] args) {
         InsertionSort insertionSort = new InsertionSort();
-        insertionSort.sort(Arrays.asList(1,5,3,2,4,10,9));
+        insertionSort.sort(Arrays.asList(4,5,3,2,1,10,9));
     }
 }
