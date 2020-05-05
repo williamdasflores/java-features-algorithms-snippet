@@ -20,18 +20,14 @@ public class InsertionSort {
 
     private List<Integer> sorting(List<Integer> numbers) {
         for (int i = 1; i < numbers.size(); i++) {
-            int index = i;
-            int minimum = i - 1;
+            int aux = numbers.get(i);
+            int prevIndex = i - 1;
 
-            while (minimum >= 0) {
-                if (numbers.get(minimum) > numbers.get(index)) {
-                    int aux = numbers.get(minimum);
-                    numbers.set(minimum, numbers.get(index));
-                    numbers.set(index, aux);
-                }
-                minimum--;
-                index--;
+            while (prevIndex >= 0 && numbers.get(prevIndex) > aux) {
+                numbers.set(prevIndex + 1, numbers.get(prevIndex));
+                prevIndex--;
             }
+            numbers.set(prevIndex + 1, aux);
         }
 
         return numbers;
