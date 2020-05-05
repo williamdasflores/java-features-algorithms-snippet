@@ -1,4 +1,4 @@
-package algorithms;
+package data_structure.binary_serch_tree;
 
 import lombok.Data;
 

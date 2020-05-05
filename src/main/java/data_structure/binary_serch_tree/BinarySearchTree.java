@@ -1,8 +1,6 @@
-package algorithms.binary_tree;
+package data_structure.binary_serch_tree;
 
-import algorithms.Node;
-
-public class BinaryTree {
+public class BinarySearchTree {
     private Node root;
 
     public Node getRoot() {

@@ -1,9 +1,11 @@
-package algorithms.binary_tree;
+package data_structure;
 
-public class RunApplication {
+import data_structure.binary_serch_tree.BinarySearchTree;
+
+public class RunBinarySearchTree {
 
     public static void main(String[] args) {
-        BinaryTree myTree = new BinaryTree();
+        BinarySearchTree myTree = new BinarySearchTree();
         myTree.insert(13);
         myTree.insert(15);
         myTree.insert(30);
