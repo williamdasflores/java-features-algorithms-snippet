@@ -1,4 +1,4 @@
-package streams;
+package parallel_streams;
 
 import streams.beans.Person;
 
@@ -6,7 +6,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.ForkJoinPool;
 
-public class ParallelStreamsExample {
+public class MoreParallelStreamExample {
     public static void main(String[] args) {
         ForkJoinPool commonPool = ForkJoinPool.commonPool();
         System.out.println("Default Pool Parallelism: " +commonPool.getParallelism());

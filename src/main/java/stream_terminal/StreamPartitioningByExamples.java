@@ -1,5 +1,7 @@
 package stream_terminal;
 
+import domain.Person;
+
 import java.util.List;
 import java.util.Map;
 import java.util.Set;

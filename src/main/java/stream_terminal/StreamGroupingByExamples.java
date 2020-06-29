@@ -1,5 +1,7 @@
 package stream_terminal;
 
+import domain.Person;
+
 import java.util.*;
 
 import static java.util.stream.Collectors.*;
