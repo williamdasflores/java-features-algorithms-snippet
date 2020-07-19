@@ -1,6 +1,7 @@
 package date;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class GenerateRandomDate {
